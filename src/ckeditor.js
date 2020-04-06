@@ -30,7 +30,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
-import SimpleUploadAdapter from '@postedin/ember-ckeditor-es/addon/simple-upload-adapter';
+import SimpleUploadAdapter from './simple-upload-adapter';
 
 class ClassicEditor extends ClassicEditorBase {}
 
