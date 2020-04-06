@@ -28,9 +28,11 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import SimpleUploadAdapter from '@postedin/ember-ckeditor-es/addon/simple-upload-adapter';
 
-export default class ClassicEditor extends ClassicEditorBase {}
+class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
@@ -56,7 +58,8 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+	SimpleUploadAdapter,
 ];
 
 // Editor configuration.
@@ -98,5 +101,29 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en'
+	language: 'es'
+};
+
+class CommentEditor extends ClassicEditorBase {
+	constructor(...args) {
+		super(...args);
+
+		this.on('ready', () => {
+			this.ui.view.top.remove(0);
+		});
+	}
+}
+
+CommentEditor.builtinPlugins = [
+	Essentials, Autoformat, Bold, Italic, BlockQuote, Link, Paragraph, Code, TextTransformation, SimpleUploadAdapter,
+];
+
+CommentEditor.defaultConfig = {
+	toolbar: false,
+	// This value must be kept in sync with the language defined in webpack.config.js.
+	language: 'es',
+};
+
+export default {
+    ClassicEditor, CommentEditor
 };
