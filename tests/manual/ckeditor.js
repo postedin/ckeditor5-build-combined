@@ -3,14 +3,14 @@
  * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
  */
 
-/* globals window, document, console */
+/* globals window, document */
 
 import ClassicEditor from '../../build/ckeditor';
 
-ClassicEditor.create( document.querySelector( '#editor' ) )
-	.then( editor => {
-		window.editor = editor;
-	} )
-	.catch( error => {
-		console.error( 'There was a problem initializing the editor.', error );
-	} );
+ClassicEditor.create(document.querySelector('#editor'))
+  .then((editor) => {
+    window.editor = editor;
+  })
+  .catch((error) => {
+    console.error('There was a problem initializing the editor.', error);
+  });

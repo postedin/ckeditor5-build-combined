@@ -1,4 +1,3 @@
-
 import ClassicEditorBase from '@ckeditor/ckeditor5-editor-classic/src/classiceditor';
 
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
@@ -13,21 +12,22 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import SimpleUploadAdapter from './simple-upload-adapter';
 
 export default class CommentEditor extends ClassicEditorBase {
-	constructor(...args) {
-		super(...args);
+  constructor(...args) {
+    super(...args);
 
-		this.on('ready', () => {
-			this.ui.view.top.remove(0);
-		});
-	}
+    this.on('ready', () => {
+      this.ui.view.top.remove(0);
+    });
+  }
 }
 
 CommentEditor.builtinPlugins = [
-	Essentials, Autoformat, Bold, Italic, BlockQuote, Link, Paragraph, Code, TextTransformation, SimpleUploadAdapter,
+  Essentials, Autoformat, Bold, Italic, BlockQuote, Link,
+  Paragraph, Code, TextTransformation, SimpleUploadAdapter,
 ];
 
 CommentEditor.defaultConfig = {
-	toolbar: false,
-	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: 'en',
+  toolbar: false,
+  // This value must be kept in sync with the language defined in webpack.config.js.
+  language: 'en',
 };

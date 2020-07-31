@@ -1,12 +1,17 @@
-/**
- * @license Copyright (c) 2003-2020, CKSource - Frederico Knabben. All rights reserved.
- * For licensing, see LICENSE.md or https://ckeditor.com/legal/ckeditor-oss-license
- */
-
-/* eslint-env node */
-
-'use strict';
-
 module.exports = {
-	extends: 'ckeditor5'
+  extends: 'airbnb-base',
+  env: {
+    es6: true,
+    mocha: true,
+  },
+  globals: {
+    expect: true,
+    sinon: true,
+  },
+  rules: {
+    'import/no-extraneous-dependencies': 0,
+    'no-underscore-dangle': 0,
+    'max-len': 0,
+    'no-shadow': 0,
+  },
 };
