@@ -6,8 +6,8 @@
 /* eslint-env node */
 
 const path = require('path');
-const webpack = require('webpack');
-const { bundler, styles } = require('@ckeditor/ckeditor5-dev-utils');
+const { styles } = require('@ckeditor/ckeditor5-dev-utils');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CKEditorWebpackPlugin = require('@ckeditor/ckeditor5-dev-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
@@ -49,9 +49,8 @@ module.exports = {
       language: 'en',
       additionalLanguages: 'all',
     }),
-    new webpack.BannerPlugin({
-      banner: bundler.getLicenseBanner(),
-      raw: true,
+    new MiniCssExtractPlugin({
+      filename: 'ckeditor-lark.css'
     }),
   ],
 
@@ -64,15 +63,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          {
-            loader: 'style-loader',
-            options: {
-              injectType: 'singletonStyleTag',
-              attributes: {
-                'data-cke': true,
-              },
-            },
-          },
+          MiniCssExtractPlugin.loader,
+          'css-loader',
           {
             loader: 'postcss-loader',
             options: styles.getPostCssConfig({

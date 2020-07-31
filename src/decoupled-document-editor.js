@@ -31,6 +31,7 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import AutoLink from '@ckeditor/ckeditor5-link/src/autolink';
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
@@ -38,6 +39,7 @@ DecoupledEditor.document = true;
 
 // Plugins to include in the build.
 DecoupledEditor.builtinPlugins = [
+  AutoLink,
   Essentials,
   Alignment,
   FontSize,

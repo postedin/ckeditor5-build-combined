@@ -10,6 +10,7 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import SimpleUploadAdapter from './simple-upload-adapter';
+import AutoLink from '@ckeditor/ckeditor5-link/src/autolink';
 
 export default class CommentEditor extends ClassicEditorBase {
   constructor(...args) {
@@ -22,7 +23,7 @@ export default class CommentEditor extends ClassicEditorBase {
 }
 
 CommentEditor.builtinPlugins = [
-  Essentials, Autoformat, Bold, Italic, BlockQuote, Link,
+  Essentials, Autoformat, Bold, Italic, BlockQuote, Link, AutoLink,
   Paragraph, Code, TextTransformation, SimpleUploadAdapter,
 ];
 

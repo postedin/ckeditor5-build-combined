@@ -23,12 +23,14 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import AutoLink from '@ckeditor/ckeditor5-link/src/autolink';
 import SimpleUploadAdapter from './simple-upload-adapter';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
 ClassicEditor.builtinPlugins = [
+  AutoLink,
   Essentials,
   UploadAdapter,
   Autoformat,
@@ -59,38 +61,24 @@ ClassicEditor.builtinPlugins = [
 ClassicEditor.defaultConfig = {
   toolbar: {
     items: [
-      'heading',
-      '|',
-      'bold',
-      'italic',
-      'link',
-      'bulletedList',
-      'numberedList',
-      '|',
-      'indent',
-      'outdent',
-      '|',
-      'imageUpload',
-      'blockQuote',
-      'insertTable',
-      'mediaEmbed',
-      'undo',
-      'redo',
+      'heading', '|',
+      'bold', 'italic', 'link', 'bulletedList', 'numberedList', '|',
+      'indent', 'outdent', '|',
+      'imageUpload', 'blockQuote', 'insertTable', 'mediaEmbed', 'undo', 'redo',
     ],
   },
   image: {
     toolbar: [
-      'imageStyle:full',
-      'imageStyle:side',
-      '|',
+      'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight', '|',
       'imageTextAlternative',
+    ],
+    styles: [
+      'full', 'alignLeft', 'alignRight',
     ],
   },
   table: {
     contentToolbar: [
-      'tableColumn',
-      'tableRow',
-      'mergeTableCells',
+      'tableColumn', 'tableRow', 'mergeTableCells',
     ],
   },
   // This value must be kept in sync with the language defined in webpack.config.js.
