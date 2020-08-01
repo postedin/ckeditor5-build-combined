@@ -9,8 +9,8 @@ import Link from '@ckeditor/ckeditor5-link/src/link';
 import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Code from '@ckeditor/ckeditor5-basic-styles/src/code';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
-import SimpleUploadAdapter from './simple-upload-adapter';
 import AutoLink from '@ckeditor/ckeditor5-link/src/autolink';
+import SimpleUploadAdapter from './simple-upload-adapter';
 
 export default class CommentEditor extends ClassicEditorBase {
   constructor(...args) {
@@ -29,6 +29,19 @@ CommentEditor.builtinPlugins = [
 
 CommentEditor.defaultConfig = {
   toolbar: false,
+  link: {
+    decorators: {
+      addTargetToLinks: {
+        mode: 'manual',
+        label: 'Open in a new tab',
+        defaultValue: true,
+        attributes: {
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        },
+      },
+    },
+  },
   // This value must be kept in sync with the language defined in webpack.config.js.
   language: 'en',
 };

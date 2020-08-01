@@ -67,6 +67,19 @@ ClassicEditor.defaultConfig = {
       'imageUpload', 'blockQuote', 'insertTable', 'mediaEmbed', 'undo', 'redo',
     ],
   },
+  link: {
+    decorators: {
+      addTargetToLinks: {
+        mode: 'manual',
+        label: 'Open in a new tab',
+        defaultValue: true,
+        attributes: {
+          target: '_blank',
+          rel: 'noopener noreferrer',
+        },
+      },
+    },
+  },
   image: {
     toolbar: [
       'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight', '|',

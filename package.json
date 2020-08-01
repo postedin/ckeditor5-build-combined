@@ -1,6 +1,6 @@
 {
   "name": "@postedin/ckeditor5-build-combined",
-  "version": "1.0.1",
+  "version": "1.0.5",
   "description": "A combined version of ckeditor for internal use with an old angularjs application.",
   "keywords": [
     "ckeditor5-build",
@@ -51,6 +51,7 @@
     "@ckeditor/ckeditor5-theme-lark": "^21.0.0",
     "@ckeditor/ckeditor5-typing": "^21.0.0",
     "@ckeditor/ckeditor5-upload": "https://gitpkg.now.sh/postedin/ckeditor5/packages/ckeditor5-upload?16acb7e",
+    "@ckeditor/ckeditor5-word-count": "^21.0.0",
     "css-loader": "^4.1.1",
     "eslint": "^7.5.0",
     "eslint-config-airbnb-base": "^14.2.0",

@@ -12,6 +12,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 0,
     'no-underscore-dangle': 0,
     'max-len': 0,
-    'no-shadow': 0,
+    'no-shadow': 1,
+    'no-param-reassign': 1,
   },
 };
