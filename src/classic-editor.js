@@ -22,6 +22,8 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefromoffice';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
+import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import AutoLink from '@ckeditor/ckeditor5-link/src/autolink';
 import SimpleUploadAdapter from './simple-upload-adapter';
@@ -53,6 +55,8 @@ ClassicEditor.builtinPlugins = [
   PasteFromOffice,
   Table,
   TableToolbar,
+  TableProperties,
+  TableCellProperties,
   TextTransformation,
   SimpleUploadAdapter,
 ];
@@ -92,6 +96,7 @@ ClassicEditor.defaultConfig = {
   table: {
     contentToolbar: [
       'tableColumn', 'tableRow', 'mergeTableCells',
+      'tableProperties', 'tableCellProperties',
     ],
   },
   // This value must be kept in sync with the language defined in webpack.config.js.
