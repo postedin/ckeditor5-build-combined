@@ -1,6 +1,6 @@
 {
   "name": "@postedin/ckeditor5-build-combined",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A combined version of ckeditor for internal use with an old angularjs application.",
   "keywords": [
     "ckeditor5-build",
