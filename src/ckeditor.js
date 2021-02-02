@@ -4,6 +4,11 @@ import ClassicEditor from './classic-editor';
 import CommentEditor from './comment-editor';
 import DecoupledEditor from './decoupled-document-editor';
 import SimpleUploadAdapter from './simple-upload-adapter';
+import version from '@ckeditor/ckeditor5-utils/src/version';
+
+if (window.Ember && window.Ember.libraries) {
+  window.Ember.libraries.register('CKEditor 5', version);
+}
 
 function injectExternalLinkPaste(editor) {
   // const writer = new UpcastWriter(editor.editing.view.document);
