@@ -27,6 +27,7 @@ import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperti
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import AutoLink from '@ckeditor/ckeditor5-link/src/autolink';
 import SimpleUploadAdapter from './simple-upload-adapter';
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -59,12 +60,14 @@ ClassicEditor.builtinPlugins = [
   TableCellProperties,
   TextTransformation,
   SimpleUploadAdapter,
+  RemoveFormat,
 ];
 
 // Editor configuration.
 ClassicEditor.defaultConfig = {
   toolbar: {
     items: [
+      'removeFormat', '|',
       'heading', '|',
       'bold', 'italic', 'link', 'bulletedList', 'numberedList', '|',
       'indent', 'outdent', '|',
