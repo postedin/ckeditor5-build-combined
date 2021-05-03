@@ -70,8 +70,8 @@ ClassicEditor.defaultConfig = {
       'removeFormat', '|',
       'heading', '|',
       'bold', 'italic', 'link', 'bulletedList', 'numberedList', '|',
-      'indent', 'outdent', '|',
-      'imageUpload', 'blockQuote', 'insertTable', 'mediaEmbed', 'undo', 'redo',
+      'outdent', 'indent', '|',
+      'uploadImage', 'blockQuote', 'insertTable', 'mediaEmbed', 'undo', 'redo',
     ],
   },
   link: {
