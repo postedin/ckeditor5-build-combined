@@ -26,8 +26,9 @@ import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import AutoLink from '@ckeditor/ckeditor5-link/src/autolink';
-import SimpleUploadAdapter from './simple-upload-adapter';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
+import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
+import SimpleUploadAdapter from './simple-upload-adapter';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -41,6 +42,7 @@ ClassicEditor.builtinPlugins = [
   Italic,
   BlockQuote,
   CKFinder,
+  CloudServices,
   EasyImage,
   Heading,
   Image,

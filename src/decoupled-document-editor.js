@@ -35,6 +35,7 @@ import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import AutoLink from '@ckeditor/ckeditor5-link/src/autolink';
+import CloudServices from '@ckeditor/ckeditor5-cloud-services/src/cloudservices';
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat';
 
 export default class DecoupledEditor extends DecoupledEditorBase {}
@@ -58,6 +59,7 @@ DecoupledEditor.builtinPlugins = [
   Underline,
   BlockQuote,
   CKFinder,
+  CloudServices,
   EasyImage,
   Heading,
   Image,
